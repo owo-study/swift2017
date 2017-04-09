@@ -15,7 +15,9 @@
 
 ## 진행 내용
 - [T아카데미 온라인 강의](https://tacademy.sktechx.com/live/player/listOnline.action) 동영상 강좌를 기초로 함께 보고 개별 실습 및 토론
-- 1주차 : (1~3강) Swift 소개와 개발 환경, 데이터 타입과 연산, 문자와 문자열
+- 1주차 : (1~3강) Swift 소개와 개발 환경,
+  [데이터 타입과 연산](./variable.md),
+  문자와 문자열
 - 2주차 : (4~6강) 예정
 
 ## Swift Bookmark's
