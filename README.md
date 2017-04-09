@@ -1,4 +1,4 @@
-:octocat: [owo-study/nodejs2016](https://github.com/owo-study/nodejs2016)
+:octocat: [owo-study/swift2017](https://github.com/owo-study/swift2017)
 # Swift 기초 스터디 (2017/가산)
 
 ## 스터디 개요
