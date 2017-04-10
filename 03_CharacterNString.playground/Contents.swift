@@ -78,6 +78,31 @@ subStr = str.substring(to: beforeIdx) // 해당 인덱스 앞으로
 print(subStr)
 subStr = str.substring(from: afterIdx) // 해당 인덱스 뒤로
 print(subStr)
-// 문자열 내 검색
+// 문자열 내 검색(range)
 
-// TODO 안되겠다 다 못하겠어어어어어
+// 트리밍
+let spaceStr = " Hello Swift "
+spaceStr.trimmingCharacters(in: .whitespaces)
+
+// 문자열 내용추가 (index로 함)
+let char: Character = "E"
+str.insert(char, at: afterIdx)
+print(str)
+// 문열 일부 삭제
+/* TODO 사용 중지
+let range = 2...5
+str.removeSubrange(Range.contains(<#T##Range<Comparable>#>))
+print(str)
+*/
+
+// 문자열 길이 다루기
+str = "안녕~ world"
+print(str.characters.count) // 글자수 (일반적으로 가장 많이 씀)
+print(str.utf8.count) // utf8로 인코딩할 경우 글자수
+print(str.unicodeScalars.count) // 유니코드로할 경우 글자수
+
+// 파일로 저장하기 (실제로는 잘 사용하지 않는 방법!)
+try str.write(toFile: "TEST", atomically: true, encoding: String.Encoding.utf8)
+let loadStr = try String.init(contentsOfFile: "TEST")
+print(loadStr)
+// Mac 프로그램 개발이 아니면 잊어버리자 (iOS는 UserDefault나 CoreData에 저장)
