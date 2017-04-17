@@ -1,6 +1,5 @@
 import Foundation
 
-var str = "Hello, playground"
 // 튜플
 var tuple1 = (false, "first", 2, 3.0)
 print(tuple1)

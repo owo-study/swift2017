@@ -21,7 +21,7 @@
   - [문자와 문자열](./string.md)
 - 2주차 (4~6강)
   - [다수의 데이터 다루기](./collections.md)
-  - 제어문
+  - [제어문](./flowcontrol.md)
   - nil과 옵셔널
 
 ## Swift Bookmark's
