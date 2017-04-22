@@ -1,4 +1,4 @@
-v:octocat: [owo-study/swift2017](https://github.com/owo-study/swift2017)
+:octocat: [owo-study/swift2017](https://github.com/owo-study/swift2017)
 ### Swift 기초 스터디 (2017/가산)
 
 ## 다수의 데이터 다루기 (=Collections)

@@ -22,7 +22,9 @@
 - 2주차 (4~6강)
   - [다수의 데이터 다루기](./collections.md)
   - [제어문](./flowcontrol.md)
-  - nil과 옵셔널
+  - [nil과 옵셔널](./optional.md)
+- 3주차 (7~8강)
+
 
 ## Swift Bookmark's
 - [Swift 공식 홈페이지](https://swift.org/)
