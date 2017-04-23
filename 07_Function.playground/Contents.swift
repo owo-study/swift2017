@@ -1,40 +1,52 @@
 import Foundation
 
-//// nil과 옵셔널
-// nil (다른언어의 null에 해당)
-// 옵셔널 타입 : 타입뒤에 ?를 붙임
-var optionalString: String? // nil값으로 자동 초기화
-print(optionalString)
-// 옵셔널 타입의 특징: nil 대입 가능, 자동 초기화 (nil값)
-// Collection 선언시 ?위치 주의!
-// var arr:[String]? 와 arr:[String?]의 차이 주의
-
-// 옵셔널 사용하기
-// if let : 옵셔널 바인딩 (gaurd let)
-var optionalValue: Int?
-if let bindingValueName = optionalValue {
-    // nil이 아닐때 처리
-    print("optionalValue가 nil이 아닙니다. if문 내부에서 bindingValueName로 사용되면 Type은 Int입니다.", bindingValueName)
-}else{
-    // nil값일 때 처리
-    print("optionalValue가 nil값입니다. bindingValueName는 사용할 수 없습니다.")
+//// 함수
+// 구성요소 : 이름, 파라미터, 리턴값
+// 리턴값은 [ -> 반환타입 ], 반환값이 없는 경우 생략 가능
+func function1(){
+    print("function1에서 수행")
 }
-// ?? 연산자 (옵셔널용 연산자)
-var optinalColorVal: String?
-optinalColorVal = "blue"
-var color = optinalColorVal ?? "lime"
+function1()
 
-// 옵셔널 체인
-var optionalStr: String?
-let string = optionalStr?.uppercased() // nil이 아니면 대문자 변환 수행
-print(string)
+// 파라미터 : 내부파라미터(함수 내부에서 사용하는 이름), 외부파라미터
+// 외부 파라미터 이름 - 함수 호출시 사용하는 이름
+// - 별도로 작성하지 않으면 동일한 이름 사용, 생략하고 싶을 때는 _ 사용
+func sayHello(ps: String){
+    print(ps)
+}
+sayHello(ps: "안녕")
 
-// 강제 언래핑 !
-var optionalInt: Int? = 100
-let forecedUnwrappingInt = optionalInt!
-print(forecedUnwrappingInt)
-// 주의: 실행타임시 nil이면 앱이 crash가 날 수 있으니 확실한 경우에만 사용할 것!
-// 암시적 언래핑 옵셔널 (IOU) : 타입 선언시 뒤에 !를 붙임 = 자동언래핑됨
-var iuoString: String! = "optinal?"
-print(iuoString)
-// 옵셔널 값을 일반 값처럼 사용 가능하나 nil일경우 런타임시 오류
+func sayHello2(person ps: String){
+    print(ps)
+}
+sayHello2(person: "세상")
+
+func sayHello3(_ ps: String){
+    print(ps)
+}
+sayHello3("세상")
+
+// - 가변 길이 파라미터도 가능 (...) : 내부에서는 배열로 인식
+func function2(_ params: Int...){
+    for param in params {
+        print(param)
+    }
+}
+function2(1,3,5,7,9)
+
+// 파라미터의 기본값을 성정이 가능함 (호출시 생략이 가능해짐)
+func function3(_ strParam: String, _ intParam: Int=1 ){
+    print(intParam, strParam)
+}
+function3("Hello", 5)
+function3("World")
+// - 파라미터는 기본적으로 상수로 인식 (inout 키워드)
+// inout파라미터의 경우 &붙여서 호출
+func function4(_ param: inout Int){
+    param = 10
+}
+var value: Int = 5
+function4(&value) // call(pass) by reference
+print(value)
+
+// 옵셔널 문제 (파라미터, 반환값)
