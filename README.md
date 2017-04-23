@@ -24,7 +24,8 @@
   - [제어문](./flowcontrol.md)
   - [nil과 옵셔널](./optional.md)
 - 3주차 (7~8강)
-
+  - [함수](./function.md)
+  - 클래스
 
 ## Swift Bookmark's
 - [Swift 공식 홈페이지](https://swift.org/)
